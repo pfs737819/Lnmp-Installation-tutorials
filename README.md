@@ -1,5 +1,5 @@
 # LNMP环境搭建
-> ###  centos7 nginx mysql php
+> ###  centos7 nginx1.12.0 mysql5.7 php7
 
 ---
 ### Nginx编译安装
