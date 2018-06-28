@@ -146,11 +146,76 @@ server {}配置块中的内容，修改location块，追加index.php让nginx服�
 /usr/local/nginx/sbin/nginx 
 ```
 
+### Mysql YUM安装
+
+* 1 . 下载mysql源安装包
+```
+wget http://dev.mysql.com/get/mysql57-community-release-el7-8.noarch.rpm
+```
+
+* 2 . 安装mysql源
+```
+yum localinstall mysql57-community-release-el7-8.noarch.rpm
+```
+检查mysql源是否安装成功
+```
+yum repolist enabled | grep "mysql.*-community.*"
+```
+
+* 3 . 安装mysql
+```
+yum install mysql-community-server
+```
+
+* 4 . 安装mysql
+```
+systemctl start mysqld
+```
+查看MySQL的启动状态
+```
+systemctl status mysqld
+```
+
+* 5 . 开机启动
+```
+systemctl enable mysqld
+```
+重载所有修改过的配置文件
+```
+systemctl daemon-reload
+```
+
+* 6 . 修改root本地登录密码
+mysql安装完成之后，在/var/log/mysqld.log文件中给root生成了一个默认密码。通过下面的方式找到root默认密码，然后登录mysql进行修改：
+```
+grep 'temporary password' /var/log/mysqld.log
+
+mysql -uroot -p
+
+mysql> ALTER USER 'root'@'localhost' IDENTIFIED BY 'newpassword!'; 
+```
+注意：mysql5.7默认安装了密码安全检查插件（validate_password），默认密码检查策略要求密码必须包含：大小写字母、数字和特殊符号，并且长度不能少于8位。否则会提示ERROR 1819 (HY000): Your password does not satisfy the current policy requirements错误
+
+
+* 7 . 添加远程登录用户
+默认只允许root帐户在本地登录，如果要在其它机器上连接mysql，必须修改root允许远程连接，或者添加一个允许远程连接的帐户，为了安全起见，我添加一个新的帐户：
+mysql> GRANT ALL PRIVILEGES ON *.* TO 'user'@'%' IDENTIFIED BY 'youpassword!' WITH GRANT OPTION;
+
+
+* 8 . 配置默认编码为utf8
+修改/etc/my.cnf配置文件，在[mysqld]下添加编码配置，如下所示：
+[mysqld]
+character_set_server=utf8
+init_connect='SET NAMES utf8'
+
+重新启动mysql服务使配置生效：
+```
+systemctl restart mysqld
+```
 
 ## 问题反馈
 在使用中有任何问题，欢迎反馈给我，可以用以下联系方式跟我交流
 
 * 邮件(654498024@qq.com)
 * QQ: 654498024
-
 
