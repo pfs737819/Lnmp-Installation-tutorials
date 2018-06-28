@@ -141,9 +141,9 @@ server {}配置块中的内容，修改location块，追加index.php让nginx服�
 这里要去掉注释改为user www;或者user www www;表示nginx服务器的权限为www
 修改完这些保存并退出，然后重启nginx：
 ```
-/usr/local/nginx/nginx -s stop
+/usr/local/nginx/sbin/nginx -s stop
 
-/usr/local/nginx/nginx 
+/usr/local/nginx/sbin/nginx 
 ```
 
 
