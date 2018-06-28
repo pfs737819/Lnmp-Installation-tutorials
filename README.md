@@ -129,7 +129,7 @@ vim /usr/local/php/etc/php-fpm.d/www.conf
 ![image][tmp]
 
 
-然后执行 ``` vim /usr/local/nginx/ conf /nginx.conf ``` 编辑nginx配置文件，具体路径根据实际的nginx.conf配置文件位置编辑，下面主要修改nginx
+然后执行 ``` vim /usr/local/nginx/conf/nginx.conf ``` 编辑nginx配置文件，具体路径根据实际的nginx.conf配置文件位置编辑，下面主要修改nginx
 server {}配置块中的内容，修改location块，追加index.php让nginx服务器默认支持index.php为首页
 
 
