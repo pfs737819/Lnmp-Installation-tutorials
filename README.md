@@ -180,7 +180,7 @@ systemctl status mysqld
 ```
 systemctl enable mysqld
 ```
-重载所有修改过的配置文件
+    重载所有修改过的配置文件
 ```
 systemctl daemon-reload
 ```
