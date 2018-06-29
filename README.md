@@ -207,6 +207,8 @@ mysql> GRANT ALL PRIVILEGES ON *.* TO 'user'@'%' IDENTIFIED BY 'youpassword!' WI
 [mysqld]
 character_set_server=utf8
 init_connect='SET NAMES utf8'
+[client]
+default-character-set = utf8
 
 重新启动mysql服务使配置生效：
 ```
