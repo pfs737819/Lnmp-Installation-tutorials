@@ -214,11 +214,13 @@ vim /etc/my.cnf
 
 [mysqld]
 character_set_server=utf8
-``
+
 [client]
 default-character-set = utf8
+```
 
-重新启动mysql服务使配置生效：
+* 9 . 重新启动mysql服务使配置生效：
+
 ```
 systemctl restart mysqld
 ```
