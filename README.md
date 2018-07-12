@@ -203,13 +203,18 @@ mysql> ALTER USER 'root'@'localhost' IDENTIFIED BY 'newpassword!';
 默认只允许root帐户在本地登录，如果要在其它机器上连接mysql，必须修改root允许远程连接，或者添加一个允许远程连接的帐户，为了安全起见，我添加一个新的帐户：
 ```
 mysql> GRANT ALL PRIVILEGES ON *.* TO 'user'@'%' IDENTIFIED BY 'youpassword!' WITH GRANT OPTION;
+mysql> flush privileges;
 ```
 
 
 * 8 . 配置默认编码为utf8
 修改/etc/my.cnf配置文件，在[mysqld]下添加编码配置，如下所示：
+```
+vim /etc/my.cnf
+
 [mysqld]
 character_set_server=utf8
+``
 [client]
 default-character-set = utf8
 
