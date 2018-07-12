@@ -76,6 +76,8 @@ yum install  gcc gcc-c++
 
 * 3 .安装包下载
 ```
+cd /usr/local/src
+
 wget http://cn2.php.net/get/php-7.2.7.tar.gz/from/this/mirror
 ```
 
