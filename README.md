@@ -107,8 +107,6 @@ cp php.ini-development /usr/local/php/lib/php.ini
 
 cp /usr/local/php/etc/php-fpm.conf.default /usr/local/php/etc/php-fpm.conf
 
-cp sapi/fpm/php-fpm /usr/local/bin
-
 cp /usr/local/php/etc/php-fpm.d/www.conf.default /usr/local/php/etc/php-fpm.d/www.conf
 
 ```
