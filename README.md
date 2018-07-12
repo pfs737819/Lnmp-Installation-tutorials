@@ -201,7 +201,9 @@ mysql> ALTER USER 'root'@'localhost' IDENTIFIED BY 'newpassword!';
 
 * 7 . 添加远程登录用户
 默认只允许root帐户在本地登录，如果要在其它机器上连接mysql，必须修改root允许远程连接，或者添加一个允许远程连接的帐户，为了安全起见，我添加一个新的帐户：
+```
 mysql> GRANT ALL PRIVILEGES ON *.* TO 'user'@'%' IDENTIFIED BY 'youpassword!' WITH GRANT OPTION;
+```
 
 
 * 8 . 配置默认编码为utf8
