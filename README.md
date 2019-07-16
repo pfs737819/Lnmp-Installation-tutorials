@@ -90,7 +90,7 @@ cd php-7.2.7
 
 * 5 . 预安装配置
 ```
- ./configure --prefix=/usr/local/php --with-curl --with-freetype-dir --with-gd --with-gettext --with-iconv-dir --with-kerberos --with-libdir=lib64 --with-libxml-dir --with-mysqli --with-openssl --with-pcre-regex --enable-pdo --with-pdo-mysql --with-pdo-sqlite --with-pear --with-png-dir --with-jpeg-dir --with-xmlrpc --with-xsl --with-zlib --with-bz2 --with-mhash --enable-fpm --enable-bcmath --enable-libxml --enable-inline-optimization --enable-gd-native-ttf --enable-mbregex --enable-mbstring --enable-opcache --enable-pcntl --enable-shmop --enable-soap --with-mcrypt --with-sqlite3 --enable-calendar --enable-ftp --with-pcre-dir  --enable-exif  --with-zlib-dir --enable-sockets --enable-sysvmsg  --enable-sysvsem  --enable-sysvshm --enable-xml --enable-zip
+ ./configure --prefix=/usr/local/php --with-curl --with-freetype-dir --with-gd --with-gettext --with-iconv-dir --with-kerberos --with-libdir=lib64 --with-libxml-dir --with-mysqli --with-openssl --with-pcre-regex --enable-pdo --with-pdo-mysql --with-pdo-sqlite --with-pear --with-png-dir --with-jpeg-dir --with-xmlrpc --with-xsl --with-zlib --with-bz2 --with-mhash --enable-fpm --enable-bcmath --enable-libxml --enable-inline-optimization --enable-mbregex --enable-mbstring --enable-opcache --enable-pcntl --enable-shmop --enable-soap --with-sqlite3 --enable-calendar --enable-ftp --with-pcre-dir  --enable-exif  --with-zlib-dir --enable-sockets --enable-sysvmsg  --enable-sysvsem  --enable-sysvshm --enable-xml --enable-zip
 ```
 实际上这里的配置项比上述还多，可以使用 ```./configure --help ``` 命令查看所有选项，这里注意在php7中--with-mysql原生支持已经不存在了，操作都变成mysqli或者pdo了；以上这些选项在正常的php开发中完全够用了，后期如果需要，可以选择手动开启相应的模块
 
