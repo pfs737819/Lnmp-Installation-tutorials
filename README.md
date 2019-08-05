@@ -167,7 +167,7 @@ yum repolist enabled | grep "mysql.*-community.*"
 yum install mysql-community-server
 ```
 
-* 4 . 安装mysql
+* 4 . 启动mysql
 ```
 systemctl start mysqld
 ```
