@@ -71,7 +71,7 @@ yum install  gcc gcc-c++
 
 * 2 . 安装其他依赖
 ```
- yum install libxml2 libxml2-devel openssl openssl-devel bzip2 bzip2-devel libcurl libcurl-devel libjpeg libjpeg-devel libpng libpng-devel freetype freetype-devel gmp gmp-devel libmcrypt libmcrypt-devel readline readline-devel libxslt libxslt-devel  curl  curl-devel  pcre  pcre-devel libsqlite3x-devel
+ yum install libxml2 libxml2-devel openssl openssl-devel bzip2 bzip2-devel libcurl libcurl-devel libjpeg libjpeg-devel libpng libpng-devel freetype freetype-devel gmp gmp-devel libmcrypt libmcrypt-devel readline readline-devel libxslt libxslt-devel  curl  curl-devel  pcre  pcre-devel sqlite-devel
 ```
 
 * 3 .安装包下载
